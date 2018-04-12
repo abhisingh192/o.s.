@@ -1,3 +1,5 @@
+//priority scheduling without preemption (low priority number means high priority)
+
 #include<stdio.h>
 int main()
 {
@@ -12,12 +14,12 @@ int main()
     {
         scanf(" %d",&bt[i]);
     }
-    
+
     printf("\tEnter the arrival time of each process : ");
     for(i = 0; i < n; i++){
         scanf(" %d",&at[i]);
     }
-    
+
     printf("\tEnter the priority of each process : ");
     for(i = 0; i < n; i++){
         scanf(" %d",&pri[i]);
@@ -39,7 +41,7 @@ int main()
                 temp = bt[j];
                 bt[j] = bt[i];
                 bt[i] = temp;
-                
+
             }
         }
     }
@@ -65,7 +67,7 @@ int main()
         }
         k++;
     }
-    wt[0]=0; 
+    wt[0]=0;
     for(i=1;i<n;i++)
     {
         sum=sum+bt[i-1];
