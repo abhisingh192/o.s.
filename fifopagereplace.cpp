@@ -17,8 +17,8 @@ cin>>s[i];
 cout<<endl;
 cout<<"menu"<<endl;
 cout<<"1. FIFO"<<endl;
-cout<<"2. LRU"<<endl;
-cout<<"3. Optimal"<<endl;
+//cout<<"2. LRU"<<endl;
+//cout<<"3. Optimal"<<endl;
 cout<<endl;
 
 cout<<"enter your choice"<<endl;
