@@ -37,21 +37,24 @@ int ch;
 
 
   for(i=0;i<3;i++){
-  if(arr[i]==-1 && arr[i-1]!=s[i])
-  arr[i] = s[i];
-  miss++;
-
+  cout<<"checking for... "<<s[i]<<endl;
+  if(arr[i]==-1 && arr[i-1]!=s[i]){
+      arr[i] = s[i];
+      miss++;
+  }
+  else if(arr[i]==-1 && arr[i-1]==s[i])
+  hit++;
 
   }
 
 
-  for(i=0;i<3;i++)
+ /* for(i=0;i<3;i++)
   cout<<arr[i]<<" ";
   cout<<endl;
   cout<<"number of hits are "<<hit<<endl;
   cout<<"number of misses are "<<miss<<endl;
   cout<<endl;
-  cout<<endl;
+  cout<<endl; */
 
 
   int k = 0;
@@ -74,7 +77,7 @@ int ch;
                 cout<<"number of misses are "<<miss<<endl;
 
                 cout<<"no page fault"<<endl;
-  		    for(j=0;j<3;j++)
+  		  for(j=0;j<3;j++)
   		    cout<<arr[j]<<" ";
              cout<<endl;
              cout<<endl;
@@ -82,40 +85,11 @@ int ch;
   		              }
 
   		else{
-  		int arr1[3];
-  		for(j=0;j<3;j++)
-  		   arr1[j]=arr[j];
 
-        int p;
-
-        for(j=0;j<3;j++){
-            for(p=i-1;p>=0;p--){
-                if(arr[j]==s[p]){
-                    arr1[j]=p;
-                    break;
-                }
-            }
-        }
-        cout<<endl<<endl;
-        for(j=0;j<3;j++)
-  		    cout<<arr1[j]<<" ";
-             cout<<endl;
-             cout<<endl;
-
-        int min = arr1[0];
-
-        for(p=1;p<3;p++){
-            if(arr1[p] < min){
-                min = p;
-            }
-        }
-        cout<<endl<<endl;
-        cout<<"min "<<min;
-        cout<<endl<<endl;
-  		arr[p] = s[i];
+  		arr[k]=s[i];
   		cout<<"checking for... "<<s[i]<<endl;
   		i++;
-
+  		k++;
 
   		cout<<"miss"<<endl;
   		miss++;
@@ -123,11 +97,12 @@ int ch;
         cout<<"number of misses are "<<miss<<endl;
 
         //cout<<"1 page fault"<<endl;
-  		for(int x=0;x<3;x++)
+  		for(int p=0;p<3;p++)
   		    cout<<arr[p]<<" ";
   		    cout<<endl;
             cout<<endl;
-
+  		    if(k>2)
+  		    k=0;
 
   		      }
 
@@ -140,6 +115,7 @@ int ch;
   		}
 
   		}
+  		// 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
 
-   // 7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
+
 
