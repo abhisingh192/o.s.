@@ -35,11 +35,11 @@ int main()
     {
         A.push_back(M[1][i]);
     }
-    for(int i=0;i<3;i++)
+    /*for(int i=0;i<3;i++)
     {
         cout<<A[i]<<" ";
     }
-    sort(A.begin(),A.end());
+    sort(A.begin(),A.end());*/
 
 
    cout<<"the sequence of execution of process is"<<endl;
